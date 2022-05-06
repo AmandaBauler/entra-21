@@ -25,6 +25,7 @@ namespace Entra21.ExerciciosWhile
 
             }
             Console.WriteLine("-------TABUADA DO " + multiplicador + " --------");
+            Console.WriteLine("LINHA TESTE");
 
         }
     }
