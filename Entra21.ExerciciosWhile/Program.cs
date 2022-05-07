@@ -58,3 +58,9 @@ else if (opcaoDesejada == 7)
     Exercicio07 exercicio07 = new Exercicio07();
     exercicio07.Executar();
 }
+else if (opcaoDesejada == 8)
+{
+    Exercicio08 exercicio08 = new Exercicio08();
+    exercicio08.Executar();
+}
+
