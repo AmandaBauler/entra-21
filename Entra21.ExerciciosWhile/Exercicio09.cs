@@ -10,21 +10,21 @@ namespace Entra21.ExerciciosWhile
     {
         public void Executar()
         {
-            int numeroEscolhido = 0;
-            int contador = numeroEscolhido;
             int fatorial = 1;
 
             Console.WriteLine("Escolha um numero: ");
-            numeroEscolhido = Convert.ToInt32(Console.ReadLine());
+            int numeroEscolhido = Convert.ToInt32(Console.ReadLine());
+            int contador = numeroEscolhido;
+            string conta = "";
 
-            while (contador >= 1)
+            while (contador != 1)
             {
                 fatorial = fatorial * contador;
-                contador = contador - 1;   
+                contador = contador - 1;
+                conta = conta + " " + contador;
 
             }
-            Console.WriteLine("O fatorial de: " + numeroEscolhido + " é " + fatorial);
-
+            Console.WriteLine("Fatorial de " + numeroEscolhido + " é " + numeroEscolhido + conta + "=" + fatorial);
         }
     }
 }
