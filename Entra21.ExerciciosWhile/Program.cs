@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Entra21.ExerciciosWhile;
 
-Console.WriteLine(@"------------Menu-----------
+/*Console.WriteLine(@"------------Menu-----------
 1- Atividade 01
 2- Atividade 02
 3- Atividade 03
@@ -78,5 +78,10 @@ else if (opcaoDesejada == 11)
     Exercicio11 exercicio11 = new Exercicio11();
     exercicio11.Executar();
 }
+else if (opcaoDesejada == 17)
+{*/
+    Exercicio17 exercicio17 = new Exercicio17();
+    exercicio17.Executar();
+//}
 
 
