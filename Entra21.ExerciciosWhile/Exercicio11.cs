@@ -10,52 +10,53 @@ namespace Entra21.ExerciciosWhile
     {
         public void Executar()
         {
-            Console.WriteLine(@"                       MENU                    |                      
-                              |   1-                          Somar            |      
-                              |   2-                          Subtrair         |
-                              |   3-                          Multiplicar      |
-                              |   4-                          Dividir          |
-                              |   5-                          Sair             |
-                              |------------------------------------------------|");
-           
-            Console.WriteLine("Informe um numero para a conta desejada: ");
-            double numeroInformado = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Informe um numero para a conta desejada: ");
-            double numeroInformado2 = Convert.ToDouble(Console.ReadLine());
-            double equacao = 0;
-            int numeroMenu = 0;
+			double numero1 = 0;
+			double numero2 = 0;
+			int opcao = 1;
 
-            while(numeroMenu != 5)
-            {
-                Console.WriteLine("Escolha um numero do menu: ");
-                numeroMenu = Convert.ToInt32(Console.ReadLine());
+			while (opcao != 5)
+			{
+				Console.WriteLine("Escolha um número: ");
+				numero1 = Convert.ToDouble(Console.ReadLine());
 
-                if (numeroMenu == 1)
-                {
-                    equacao = numeroInformado + numeroInformado2;
-                    Console.WriteLine("Você escolheu a operação " + numeroMenu + " e a o resultado da conta é " + equacao);
-                }
-                else if (numeroMenu == 2)
-                {
-                    equacao = numeroInformado - numeroInformado2;
-                    Console.WriteLine("Você escolheu a operação " + numeroMenu + " e a o resultado da conta é " + equacao);
-                }
-                else if (numeroMenu == 3)
-                {
-                    equacao = numeroInformado * numeroInformado2;
-                    Console.WriteLine("Você escolheu a operação " + numeroMenu + " e a o resultado da conta é " + equacao);
-                }
-                else if (numeroMenu == 4)
-                {
-                    equacao = numeroInformado / numeroInformado2;
-                    Console.WriteLine("Você escolheu a operação " + numeroMenu + " e a o resultado da conta é " + equacao);
-                }
-                else
-                {
-                    Console.WriteLine("Você escolheu a opção Sair.");
-                }
-               
-            }
+				Console.WriteLine("Escolha um número: ");
+				numero2 = Convert.ToDouble(Console.ReadLine());
+
+				Console.WriteLine("            MENU             ");
+				Console.WriteLine("1  -------------------- SOMAR");
+				Console.WriteLine("2  -------------------- SUBTRAIR");
+				Console.WriteLine("3  -------------------- MULTIPLICAR");
+				Console.WriteLine("4  -------------------- DIVIDIR");
+				Console.WriteLine("5  -------------------- SAIR");
+				Console.WriteLine("Escolha uma das opções acima:");
+				opcao = Convert.ToInt32(Console.ReadLine());
+
+				if (opcao == 1)
+				{
+					Console.WriteLine("Equação " + numero1 + " + " + numero2 + " = " + (numero1 + numero2));
+				}
+				else if (opcao == 2)
+				{
+					Console.WriteLine("Equação: " + numero1 + " - " + numero2 + " = " + (numero1 - numero2));
+				}
+				else if (opcao == 3)
+				{
+					Console.WriteLine("Equação: " + numero1 + " x " + numero2 + " = " + (numero1 * numero2));
+				}
+				else if (opcao == 4)
+				{
+					Console.WriteLine("Equação: " + numero1 + " / " + numero2 + " = " + (numero1 / numero2));
+				}
+				else if (opcao == 5)
+				{
+					Console.Clear();
+					Console.WriteLine("FIM.");
+				}
+				else
+				{
+					Console.WriteLine("Opção Inválida.");
+				}
+			}
            
         }
     }
