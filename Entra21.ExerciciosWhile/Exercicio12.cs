@@ -10,26 +10,130 @@ namespace Entra21.ExerciciosWhile
     {
         public void Executar()
         {
-            Console.WriteLine(@"______________________________________________________________________________
-                               |Código |   Tipo    |                  Nome                      |   Valor
-                               |  1    |  Bolos    | Bolo Brigadeiro                            | R$ 29,50
-                               |  2    |   Bolos   | Bolo Floresta Negra                        | R$ 2,00
-                               |  3    |   Bolos   | Bolo Leite com Nutella                     | R$ 29,23
-                               |  4    |  Bolos    | Bolo Mousse de Chocolate                   | R$ 7,10
-                               |  5    |  Bolos    | Bolo Nega Maluca                           | R$ 19,33
-                               |  6    |  Doces    | Bomba de Creme                             | R$ 17,71
-                               |  7    |   Doces   | Bomba de Morango                           | R$ 4,82
-                               |  8    | Sanduíches| Filé-Mignon com fritas e cheddar           | R$ 21,16
-                               |  9    | Sanduíches| Hambúrguer com queijos champignon e rúcula | R$ 12,70
-                               |  10   | Sanduíches| Provolone com salame                       | R$ 19,70
-                               |  11   | Sanduíches| Vegetariano de berinjela                   | R$ 28,22
-                               |  12   | Pizzas    | Calabresa                                  | R$ 8,98
-                               |  13   | Pizzas    | Napolitana                                 | R$ 0,42
-                               |  14   | Pizzas    | Peruana                                    | R$ 18,36
-                               |  15   | Pizzas    | Portuguesa                                 | R$ 27,50
-                               |  16   |               Sair                                     |");
+			Console.WriteLine("Cardápio:");
+			Console.WriteLine("=============================Bolos==============================");
+			Console.WriteLine("1- Bolo Brigadeiro                             ------ 29,50");
+			Console.WriteLine("2- Bolo Floresta Negra                         ------ 2,00");
+			Console.WriteLine("3- Bolo Leite com Nutella                      ------ 29,23");
+			Console.WriteLine("4- Bolo Mousse de Chocolate                    ------ 7,10");
+			Console.WriteLine("5- Bolo Nega Maluca                            ------ 19,33");
+			Console.WriteLine("=================================================================");
+			Console.WriteLine("==============================Doces==============================");
+			Console.WriteLine("6- Bomba de Creme                              ------ 17,71");
+			Console.WriteLine("7- Bomba de Morango                            ------ 4,82");
+			Console.WriteLine("=================================================================");
+			Console.WriteLine("===========================Sanduíches============================");
+			Console.WriteLine("8- Filé-Mignon com fritas e cheddar            ------ 21,16");
+			Console.WriteLine("9- Hambúrguer com queijos, champignon e rúcula ------ 12,70");
+			Console.WriteLine("10- Provolone com salame                       ------ 19,70");
+			Console.WriteLine("11- Vegetariano de berinjela                   ------ 28,22");
+			Console.WriteLine("=================================================================");
+			Console.WriteLine("=============================Pizzas==============================");
+			Console.WriteLine("12- Calabresa                                  ------ 8,98");
+			Console.WriteLine("13- Napolitana                                 ------ 0,42");
+			Console.WriteLine("14- Peruana                                    ------ 18,36");
+			Console.WriteLine("15- Portuguesa                                 ------ 27,50");
+			Console.WriteLine("=================================================================");
+			Console.WriteLine("16-                                           ------ SAIR");
+			Console.WriteLine("Escolha algumas opções, informando abaixo o número do item que deseja!");
 
-     
-        }
+			int item = 1;
+			int quantidadeBolos = 0, quantidadeDoces = 0, quantidadeSanduiches = 0, quantidadePizzas = 0;
+			double valorTotal = 0;
+
+
+			while ((item != 16) && (item >= 1) && (item <= 15))
+			{
+				Console.WriteLine("Informe o número do item: ");
+				item = Convert.ToInt32(Console.ReadLine());
+
+				if (item == 1)
+				{
+					valorTotal = valorTotal + 29.50;
+					quantidadeBolos = quantidadeBolos + 1;
+				}
+				else if (item == 2)
+				{
+					valorTotal = valorTotal + 2.00;
+					quantidadeBolos = quantidadeBolos + 1;
+				}
+				else if (item == 3)
+				{
+					valorTotal = valorTotal + 29.23;
+					quantidadeBolos = quantidadeBolos + 1;
+				}
+				else if (item == 4)
+				{
+					valorTotal = valorTotal + 7.10;
+					quantidadeBolos = quantidadeBolos + 1;
+				}
+				else if (item == 5)
+				{
+					valorTotal = valorTotal + 19.33;
+					quantidadeBolos = quantidadeBolos + 1;
+				}
+				else if (item == 6)
+				{
+					valorTotal = valorTotal + 17.71;
+					quantidadeDoces = quantidadeDoces + 1;
+				}
+				else if (item == 7)
+				{
+					valorTotal = valorTotal + 4.82;
+					quantidadeDoces = quantidadeDoces + 1;
+				}
+				else if (item == 8)
+				{
+					valorTotal = valorTotal + 21.16;
+					quantidadeSanduiches = quantidadeSanduiches + 1;
+				}
+				else if (item == 9)
+				{
+					valorTotal = valorTotal + 12.70;
+					quantidadeSanduiches = quantidadeSanduiches + 1;
+				}
+				else if (item == 10)
+				{
+					valorTotal = valorTotal + 19.70;
+					quantidadeSanduiches = quantidadeSanduiches + 1;
+				}
+				else if (item == 11)
+				{
+					valorTotal = valorTotal + 28.22;
+					quantidadeSanduiches = quantidadeSanduiches + 1;
+				}
+				else if (item == 12)
+				{
+					valorTotal = valorTotal + 8.98;
+					quantidadePizzas = quantidadePizzas + 1;
+				}
+				else if (item == 13)
+				{
+					valorTotal = valorTotal + 0.42;
+					quantidadePizzas = quantidadePizzas + 1;
+				}
+				else if (item == 14)
+				{
+					valorTotal = valorTotal + 18.36;
+					quantidadePizzas = quantidadePizzas + 1;
+				}
+				else if (item == 15)
+				{
+					valorTotal = valorTotal + 27.50;
+					quantidadePizzas = quantidadePizzas + 1;
+				}
+
+			}
+			double quantidadeTotalProduto = quantidadeBolos + quantidadeDoces + quantidadeSanduiches + quantidadePizzas;
+
+			Console.WriteLine("O cliente escolheu " + quantidadeBolos + " bolo (os)");
+			Console.WriteLine("O cliente escolheu " + quantidadeDoces + " doce (es)");
+			Console.WriteLine("O cliente escolheu " + quantidadeSanduiches + " sanduiche (es)");
+			Console.WriteLine("O cliente escolheu " + quantidadePizzas + " pizza (as)");
+			Console.WriteLine("A quantidade de produtos comprados foi: " + quantidadeTotalProduto);
+			Console.WriteLine("O valor total da compra é R$" + valorTotal);
+
+
+		}
     }
 }
