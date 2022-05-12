@@ -41,7 +41,7 @@ namespace Entra21.ExerciciosWhile
                 indice = indice + 1;
             }
 
-            Console.WriteLine("Média do ano dos carros: " + Convert.ToString(anoCarro / quantidadeDeCarros));
+            Console.WriteLine("Média do ano dos carros: " + (anoCarro / quantidadeDeCarros));
             Console.WriteLine("Média de valores dos carros: " + (valorCarro / quantidadeDeCarros));
             Console.WriteLine("Quantidade de carros que começam com a letra G: " + quantidadeComecaG);
             Console.WriteLine("Quantidade de carros que começam com a letra A: " + quantidadeComecaA);

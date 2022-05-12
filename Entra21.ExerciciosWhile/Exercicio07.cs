@@ -24,7 +24,7 @@ namespace Entra21.ExerciciosWhile
                 Console.WriteLine("Digite o valor do Produto: ");
                 valor = Convert.ToDouble(Console.ReadLine());
 
-                soma = soma + valor;
+                soma = soma + (valor * quantidadeProdutos);
 
             }
             Console.WriteLine("Valor total: " + (soma - 150));
