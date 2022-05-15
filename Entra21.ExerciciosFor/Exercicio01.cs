@@ -15,10 +15,19 @@ namespace Entra21.ExerciciosFor
 
             for (var i = 0; i < 13; i = i + 1)
             {
-                Console.WriteLine("Nome da peça: ");
-                nome = Console.ReadLine();
-                Console.WriteLine("Valor da peça: ");
-                preco = Convert.ToDouble(Console.ReadLine());
+                try
+                {
+                    Console.WriteLine("Nome da peça: ");
+                    nome = Console.ReadLine();
+                    Console.WriteLine("Valor da peça: ");
+                    preco = Convert.ToDouble(Console.ReadLine());
+
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Informação invalida.");
+                }
+                
             }
         }
     }
