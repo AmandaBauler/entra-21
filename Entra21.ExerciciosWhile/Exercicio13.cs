@@ -10,11 +10,7 @@ namespace Entra21.ExerciciosWhile
     {
         public void Executar()
         {
-            string nome = "", nomeJogadorMaiorPeso = "", nomeJogadorMenorPeso = "", nomeJogadorMaiorAltura = "";
-            double peso = 0;
-            string sexo = "";
-            double altura = 0;
-            int quantidadeGolsMarcados = 0, quantidadeCartaoAmarelo = 0, quantidadeCartaoVermelhos = 0;
+            string nomeJogadorMaiorPeso = "", nomeJogadorMenorPeso = "", nomeJogadorMaiorAltura = "";
             int estatistica = 0;
             string jogadorMaiorNome = "", jogadorMenorNome = "                                                     ";
             double jogadorMaiorPeso = 0, jogadorMenorPeso = double.MaxValue;
@@ -26,24 +22,26 @@ namespace Entra21.ExerciciosWhile
             string nomeJogadorMaiorQtdCartaoAmarelo = "", nomeJogadorMenorQtdCartaoAmarelo = "", nomeJogadorMaiorQtdCartaoVermelho = "";
             string nomeJogadorMenorQtdCartaoVermelho = "";
 
-            while (estatistica <= 5)
+            while (estatistica <= 22)
             {
+
+
                 Console.WriteLine("Informe seu nome: ");
-                nome = Console.ReadLine();
+                string nome = Console.ReadLine();
                 Console.WriteLine("Informe sua idade: ");
                 int idade = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Informe seu peso: ");
-                peso = Convert.ToDouble(Console.ReadLine());
+                double peso = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Informe seu sexo: ");
-                sexo = Console.ReadLine();
+                string sexo = Console.ReadLine();
                 Console.WriteLine("Informe sua altura: ");
-                altura = Convert.ToDouble(Console.ReadLine());
+                double altura = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Quantos gols marcados: ");
-                quantidadeGolsMarcados = Convert.ToInt32(Console.ReadLine());
+                int quantidadeGolsMarcados = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Quantos cartões amarelos sofridos: ");
-                quantidadeCartaoAmarelo = Convert.ToInt32(Console.ReadLine());
+                int quantidadeCartaoAmarelo = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Quantos cartões vermelhos sofridos: ");
-                quantidadeCartaoVermelhos = Convert.ToInt32(Console.ReadLine());
+                int quantidadeCartaoVermelhos = Convert.ToInt32(Console.ReadLine());
 
                 if (nome.Length > jogadorMaiorNome.Length)
                 {

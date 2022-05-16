@@ -10,7 +10,7 @@ namespace Entra21.ExerciciosFor
     {
         public void Executar()
         {
-            var modelo = "";
+            
             var anoCarro = 0;
             var valorCarro = 0.0;
             var quantidadeCarrosLetraG = 0;
@@ -21,6 +21,7 @@ namespace Entra21.ExerciciosFor
 
             for (var indice = 0; indice < quantidadeCarros; indice = indice + 1)
             {
+                var modelo = "";
 
                 try
                 {
