@@ -13,18 +13,24 @@ namespace Entra21.ExerciciosFor
             
             var multiplicador2 = 0;
             var multiplicando = 0;
-
-            Console.WriteLine("Escolha um numero ");
-            var multiplicador = Convert.ToInt32(Console.ReadLine());
-
-            for (var contador = 0;  contador <= 1000; contador++)
+            try
             {
-                multiplicando = multiplicador * multiplicador2;
+                Console.WriteLine("Escolha um numero ");
+                var multiplicador = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine(multiplicador + " X " + multiplicador2 + " = " + multiplicando);
+                for (var contador = 0; contador <= 1000; contador++)
+                {
+                    multiplicando = multiplicador * multiplicador2;
 
-                multiplicador2++;
-               
+                    Console.WriteLine(multiplicador + " X " + multiplicador2 + " = " + multiplicando);
+
+                    multiplicador2++;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Informação Invalida.");
             }
 
         }
