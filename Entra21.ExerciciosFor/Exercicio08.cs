@@ -10,11 +10,11 @@ namespace Entra21.ExerciciosFor
     {
         public void Executar()
         {
-            
+
             var multiplicador2 = 0;
-            var multiplicando = 0;
             try
             {
+                var multiplicando = 0;
                 Console.WriteLine("Escolha um numero ");
                 var multiplicador = Convert.ToInt32(Console.ReadLine());
 
