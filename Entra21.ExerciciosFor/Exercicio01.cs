@@ -10,17 +10,14 @@ namespace Entra21.ExerciciosFor
     {
         public void Executar()
         {
-            var preco = 0.0;
-            var nome = "";
-
             for (var i = 0; i < 13; i = i + 1)
             {
                 try
                 {
                     Console.WriteLine("Nome da peça: ");
-                    nome = Console.ReadLine();
+                    var nome = Console.ReadLine();
                     Console.WriteLine("Valor da peça: ");
-                    preco = Convert.ToDouble(Console.ReadLine());
+                    var preco = Convert.ToDouble(Console.ReadLine());
 
                 }
                 catch(Exception ex)

@@ -10,23 +10,30 @@ namespace Entra21.ExerciciosFor
     {
         public void Executar()
         {
-            
+
             var anoCarro = 0;
             var valorCarro = 0.0;
+            var quantidadeCarros = 0;
             var quantidadeCarrosLetraG = 0;
             var quantidadeCarrosLetraA = 0;
 
-            Console.WriteLine("Digite a quantidade de carros que deseja cadastrar");
-            var quantidadeCarros = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Digite a quantidade de carros que deseja cadastrar");
+                quantidadeCarros = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Informação invalida.");
+            }
 
             for (var indice = 0; indice < quantidadeCarros; indice = indice + 1)
             {
-                var modelo = "";
 
                 try
                 {
                     Console.WriteLine("Digite o modelo do carro:");
-                    modelo = Console.ReadLine();
+                    var modelo = Console.ReadLine();
                     if (modelo.ToUpper().StartsWith("G"))
                     {
                         quantidadeCarrosLetraG = quantidadeCarrosLetraG + 1;
