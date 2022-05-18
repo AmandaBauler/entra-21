@@ -21,7 +21,7 @@ namespace Entra21.ExerciciosFor
             string nomeJogadorMaiorQtdCartaoAmarelo = "", nomeJogadorMenorQtdCartaoAmarelo = "", nomeJogadorMaiorQtdCartaoVermelho = "";
             var nomeJogadorMenorQtdCartaoVermelho = "";
 
-            for (var estatistica = 0; estatistica < 3; estatistica++)
+            for (var estatistica = 0; estatistica < 22; estatistica++)
             {
                 Console.WriteLine("Informe seu nome: ");
                 var nome = Console.ReadLine();
