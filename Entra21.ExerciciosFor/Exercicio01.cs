@@ -10,7 +10,7 @@ namespace Entra21.ExerciciosFor
     {
         public void Executar()
         {
-            for (var i = 0; i < 13; i = i + 1)
+            for (var i = 0; i < 13; i++)
             {
                 try
                 {

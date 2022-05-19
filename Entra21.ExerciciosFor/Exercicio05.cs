@@ -27,7 +27,7 @@ namespace Entra21.ExerciciosFor
                 Console.WriteLine("Informação invalida.");
             }
 
-            for (var indice = 0; indice < quantidadeCarros; indice = indice + 1)
+            for (var indice = 0; indice < quantidadeCarros; indice++)
             {
 
                 try
