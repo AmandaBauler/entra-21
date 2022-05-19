@@ -74,8 +74,8 @@ namespace Entra21.ExerciciosFor
 
             Console.WriteLine("A média de ano dos carros é " + mediaAnoCarros);
             Console.WriteLine("A média de valor dos carros é " + mediaValorCarros);
-            Console.WriteLine(quantidadeCarrosLetraG + " carros começam com a letra G");
-            Console.WriteLine(quantidadeCarrosLetraA + " carros começam com a letra A");
+            Console.WriteLine(quantidadeCarrosLetraG + " carro (os) começam com a letra G");
+            Console.WriteLine(quantidadeCarrosLetraA + " carro (os) começam com a letra A");
 
         }
     }
