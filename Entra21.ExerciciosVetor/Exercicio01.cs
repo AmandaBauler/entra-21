@@ -17,8 +17,16 @@ namespace Entra21.ExerciciosVetor
 
             for (int i = 0; i < numeros.Length; i++)
             {
-                Console.WriteLine("Escreva um numero: ");
-                numeros[i] = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    Console.WriteLine("Escreva um numero: ");
+                    numeros[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Numero invalido.");
+                }
+                
             }
 
             int soma = 0;
