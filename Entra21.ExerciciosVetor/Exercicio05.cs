@@ -13,19 +13,29 @@ namespace Entra21.ExerciciosVetor
             //Solicite para o usuário 5 pesos e apresente a soma total dos pesos e a média dos pesos.
 
             double[] pesos = new double[5];
-            int i = 0;
+            
 
-            for (i = 0;  i < pesos.Length; i++)
+            for (int i = 0;  i < pesos.Length; i++)
             {
-                Console.WriteLine("Informe o peso: ");
-                pesos[i] = Convert.ToDouble(Console.ReadLine());
+                try
+                {
+                    Console.WriteLine("Informe o peso: ");
+                    pesos[i] = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("ERRO! O conteudo que digitou não é um peso.");
+                }
             }
             double soma = 0;
 
-            for (i = 0; i < pesos.Length; i++)
+            for (int i = 0; i < pesos.Length; i++)
             {
                 soma = soma + pesos[i];
             }
+            Console.WriteLine("Soma dos pesos: " + soma);
+            double media = soma / pesos.Length;
+            Console.WriteLine("Média dos pesos: " + media);
 
         }
 
