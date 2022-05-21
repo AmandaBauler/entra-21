@@ -42,5 +42,9 @@ else if (opcaoDesejada == 6)
     Exercicio06 exercicio06 = new Exercicio06();
     exercicio06.Executar();
 }
-
+else if (opcaoDesejada == 7)
+{
+    Exercicio07 exercicio07 = new Exercicio07();
+    exercicio07.Executar();
+}
 
