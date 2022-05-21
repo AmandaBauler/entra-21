@@ -21,9 +21,16 @@ namespace Entra21.ExerciciosVetor
             {
                 Console.WriteLine("Nome do produto: ");
                 nomeProduto[i] = nomeProduto[i] + Console.ReadLine();
-                Console.WriteLine("Preço do produto: ");
-                valorProduto[i] = valorProduto[i] + Convert.ToDouble(Console.ReadLine());
-
+                try
+                {
+                    Console.WriteLine("Preço do produto: ");
+                    valorProduto[i] = valorProduto[i] + Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("ERRO! Informação digitada invalida.");
+                }
+    
             }
             Console.Clear();
 
