@@ -22,3 +22,10 @@ else if (opcaoDesejada == 2)
     Exercicio02 exercicio02 = new Exercicio02();
     exercicio02.Executar();
 }
+else if (opcaoDesejada == 3)
+{
+    Exercicio03 exercicio03 = new Exercicio03();
+    exercicio03.Executar();
+}
+
+

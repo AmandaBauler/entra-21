@@ -20,6 +20,7 @@ namespace Entra21.ExerciciosVetor
                 Console.WriteLine("Nome: ");
                 nomes[i] = nomes[i] + Console.ReadLine();
             }
+            Console.Clear();
 
             for (i = 0; i < nomes.Length; i++)
             {
