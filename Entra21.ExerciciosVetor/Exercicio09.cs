@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +23,12 @@ namespace Entra21.ExerciciosVetor
             {
                 Console.WriteLine("Digite o nome: ");
                 nomes[i] = Console.ReadLine();
+
+                for (int j = 4; j >= 0; j--)
+                {
+                    posicoes[armazenamento] = nomes[i];
+                    armazenamento++;
+                }
             }
 
             for (int i = 4; i >= 0; i--)

@@ -39,7 +39,7 @@ else if (opcaoDesejada == 4)
     Exercicio04 exercicio04 = new Exercicio04();
     exercicio04.Executar();
 }
-else if (opcaoDesejada == 5) 
+else if (opcaoDesejada == 5)
 {
     Exercicio05 exercicio05 = new Exercicio05();
     exercicio05.Executar();
@@ -68,6 +68,11 @@ else if (opcaoDesejada == 10)
 {
     Exercicio10 exercicio10 = new Exercicio10();
     exercicio10.Executar();
+}
+else if (opcaoDesejada == 11)
+{
+    Exercicio11 exercicio11 = new Exercicio11();
+    exercicio11.Executar();
 }
 else if (opcaoDesejada == 12)
 {
