@@ -13,21 +13,34 @@ namespace Entra21.ExerciciosVetor
             //Crie um vetor de números e solicite. Após isto apresentar os números em ordem crescente.
             //Obrigatório utilização de for para apresentar em ordem crescente.
 
-            Console.WriteLine("Quantos numeros quer apresentar?");
+            Console.WriteLine("Quantos produtos quer apresentar?");
             int quantidadeNumeros = Convert.ToInt32(Console.ReadLine());
 
-            int[] numeros = new int[quantidadeNumeros];
+            string[] produtos = new string[quantidadeNumeros];
 
-            for (int i = 0; i < numeros.Length; i++)
+            for (int i = 0; i < produtos.Length; i++)
             {
-                Console.WriteLine("Escolha um numero: ");
-                numeros[i] = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Informe um produto: ");
+                produtos[i] = Console.ReadLine();
             }
-            Array.Sort(numeros);
 
-            for (int i = 0; i < numeros.Length; i++)
+            for (int i = 1; i < produtos.Length; i++)
             {
-                Console.WriteLine("Ordem crescente: " + numeros[i]);
+                for (int j = 0; j < produtos.Length - 1; j++)
+                {
+                    if (produtos[i].Length < produtos[j].Length)
+                    {
+                        string aux = produtos[j];
+                        produtos[j] = produtos[i];
+                        produtos[i] = aux;
+                    }
+                }
+            }
+
+
+            for (int i = 0; i < produtos.Length; i++)
+            {
+                Console.WriteLine("Produto: " + produtos[i]);
             }
         }
 
