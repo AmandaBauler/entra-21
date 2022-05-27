@@ -31,6 +31,5 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
         {
             Console.WriteLine($"Você leu no total {QuantidadePaginasLidas} páginas.");
         }
-
     }
 }
