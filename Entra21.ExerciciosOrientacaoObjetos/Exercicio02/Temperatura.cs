@@ -20,10 +20,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
         {
             return TemperaturaAtual + 273;
         }
-        public double CalculandoCelsius()
-        {
-            return TemperaturaAtual;
-        }
         public double CalcularKelvinParaCelsius()
         {
             return TemperaturaAtual - 273;
@@ -33,10 +29,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             return ((TemperaturaAtual - 273) * 1.8) + 32;
 
         }
-        public double CalcularKelvin()
-        {
-            return TemperaturaAtual;
-        }
         public double CalcularFahrenheitParaCelsius()
         {
             return (TemperaturaAtual - 32) / 1.8;
@@ -44,10 +36,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
         public double CalcularFahrenheitParaKelvin()
         {
             return ((TemperaturaAtual - 32) * 5 / 9) + 273;
-        }
-        public double CalcularFahrenheit()
-        {
-            return TemperaturaAtual;
         }
         public double ApresentarTemperatura()
         {
@@ -59,10 +47,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             {
                 return CalcularCelsiusParaKelvin();
             }
-            else if (TipoTemperaturaOrigem.StartsWith("C") && TipoTemperaturaDestino.StartsWith("C"))
-            {
-                return CalculandoCelsius();
-            }
             else if (TipoTemperaturaOrigem.StartsWith("K") && TipoTemperaturaDestino.StartsWith("C"))
             {
                 return CalcularKelvinParaCelsius();
@@ -70,10 +54,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             else if (TipoTemperaturaOrigem.StartsWith("K") && TipoTemperaturaDestino.StartsWith("F"))
             {
                 return CalculandoKelvinParaFahrenheit();
-            }
-            else if (TipoTemperaturaOrigem.StartsWith("K") && TipoTemperaturaDestino.StartsWith("K"))
-            {
-                return CalcularKelvin();
             }
             else if (TipoTemperaturaOrigem.StartsWith("F") && TipoTemperaturaDestino.StartsWith("C"))
             {
@@ -83,15 +63,9 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             {
                 return CalcularFahrenheitParaKelvin();
             }
-            else if (TipoTemperaturaOrigem.StartsWith("F") && TipoTemperaturaDestino.StartsWith("F"))
-            {
-                return CalcularFahrenheit();
-            }
 
             return TemperaturaAtual;
         }
-
-
 
     }
 }
