@@ -1,4 +1,5 @@
 ﻿using Entra21.ExerciciosOrientacaoObjetos.Exercicio01;
+using Entra21.ExerciciosOrientacaoObjetos.Exercicio02;
 
 Console.WriteLine(@"------------Menu-----------
 1- Atividade 01
@@ -13,4 +14,9 @@ if(opcaoDesejada == 1)
 {
     ExemploLivro exemploLivro = new ExemploLivro();
     exemploLivro.Executar();
+}
+else if(opcaoDesejada == 2)
+{
+    ExemploTemperatura exemploTemperatura = new ExemploTemperatura();
+    exemploTemperatura.Executar();
 }
