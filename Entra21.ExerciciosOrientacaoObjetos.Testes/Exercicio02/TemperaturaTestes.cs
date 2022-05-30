@@ -51,10 +51,50 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Testes.Exercicio02
             var temperaturaConvertida = temperatura.CalcularKelvinParaCelsius();
 
             //Assert
-            temperaturaConvertida.Should().Be(42 - 273);
+            temperaturaConvertida.Should().Be(42.7 - 273);
         }
 
+        [Fact]
+        public void Validar_CalculandoKelvinParaFahrenheit()
+        {
+            //Arrange
+            Temperatura temperatura = new Temperatura();
+            temperatura.TemperaturaAtual = 42.7;
 
+            //Act
+            var temperaturaConvertida = temperatura.CalculandoKelvinParaFahrenheit();
+
+            //Assert
+            temperaturaConvertida.Should().Be(((42.7 - 273) * 1.8) + 32);
+        }
+
+        [Fact]
+        public void Validar_CalcularFahrenheitParaCelsius()
+        {
+            //Arrange
+            Temperatura temperatura = new Temperatura();
+            temperatura.TemperaturaAtual = 42.7;
+
+            //Act
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaCelsius();
+
+            //Assert
+            temperaturaConvertida.Should().Be((42.7 - 32) / 1.8);
+        }
+
+        [Fact]
+        public void Validar_CalcularFahrenheitParaKelvin()
+        {
+            //Arrange
+            Temperatura temperatura = new Temperatura();
+            temperatura.TemperaturaAtual = 42.7;
+
+            //Act
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaKelvin();
+
+            //Assert
+            temperaturaConvertida.Should().Be(((42.7 - 32) * 5 / 9) + 273);
+        }
 
     }
 }
