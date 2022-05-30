@@ -1,5 +1,6 @@
 ﻿using Entra21.ExerciciosOrientacaoObjetos.Exercicio01;
 using Entra21.ExerciciosOrientacaoObjetos.Exercicio02;
+using Entra21.ExerciciosOrientacaoObjetos.Exercicio03;
 
 Console.WriteLine(@"------------Menu-----------
 1- Atividade 01
@@ -19,4 +20,9 @@ else if(opcaoDesejada == 2)
 {
     ExemploTemperatura exemploTemperatura = new ExemploTemperatura();
     exemploTemperatura.Executar();
+}
+else if(opcaoDesejada == 3)
+{
+    ExemploConversorAscii exemploConversorAscii = new ExemploConversorAscii();
+    exemploConversorAscii.Executar();
 }
