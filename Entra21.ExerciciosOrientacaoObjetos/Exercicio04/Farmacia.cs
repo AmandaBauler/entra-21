@@ -28,30 +28,18 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         {
             CalcularPrecoTotalProdutos();
         }
-        public bool VerificarCategoriaProdutosEhAntibiotico()
-        {
-            for (int i = 0; i < NomesProdutos.Length; i++)
-            {
-                if (CategoriaProdutos[i] == "Antibiotico")
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
         public double CalcularValoresPorCategoriaAntibiotico()
         {
             var totalPedidosAntibiotico = 0.0;
 
-            if (VerificarCategoriaProdutosEhAntibiotico() == true)
+            for(int i = 0; i < NomesProdutos.Length; i++)
             {
-                for (int i = 0; i < NomesProdutos.Length; i++)
+                if(CategoriaProdutos[i] == "Antibiotico")
                 {
                     totalPedidosAntibiotico = totalPedidosAntibiotico + PrecosProdutos[i];
                 }
             }
-
+           
             return totalPedidosAntibiotico;
         }
         public void ApresentarValorProdutoAntibiotico()
@@ -61,40 +49,32 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         public int CalcularQuantidadePedidosAntibioticos()
         {
             int quantidadeAntibioticos = 0;
-            if (VerificarCategoriaProdutosEhAntibiotico() == true)
-            {
-                for (var i = 0; i < NomesProdutos.Length; i++)
-                {
-                    if (CategoriaProdutos[i] == "Antibiotico")
-                    {
-                        quantidadeAntibioticos += 1;
-                    }
-                }
-            }
 
+            for (int i = 0; i < NomesProdutos.Length; i++)
+            {
+                if(CategoriaProdutos[i] == "Antibiotico")
+                {
+                    quantidadeAntibioticos++;
+                }
+
+            }
+            
             return quantidadeAntibioticos;
 
         }
-        public bool VerificarCategoriaProdutosEhAntiinflamatorio()
+        public void ApresentarQuantidadeAntibiotco()
         {
-            for (int i = 0; i < NomesProdutos.Length; i++)
-            {
-                if (CategoriaProdutos[i] == "Antibiotiinflamatorio")
-                {
-                    return true;
-                }
-            }
-            return false;
+            CalcularQuantidadePedidosAntibioticos();
         }
+     
         public double CalcularValoresPorCategoriaAntiinflamatorio()
         {
             var totalPedidosAntiinflamatorio = 0.0;
-
-            if (VerificarCategoriaProdutosEhAntiinflamatorio() == true)
+           for(int i = 0; i < NomesProdutos.Length; i++)
             {
-                for (int i = 0; i < NomesProdutos.Length; i++)
+                if (CategoriaProdutos[i] == "Antiinflamatorio")
                 {
-                    totalPedidosAntiinflamatorio = totalPedidosAntiinflamatorio + PrecosProdutos[i];
+                    totalPedidosAntiinflamatorio++;
                 }
             }
 
@@ -103,6 +83,23 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         public void ApresentarValorProdutoAntiinflamatorio()
         {
             CalcularValoresPorCategoriaAntiinflamatorio();
+        }
+        public int CalularQuantidadePedidosAntiinflamatorio()
+        {
+            int quantidadeAntiinflamatorio = 0;
+           for( int i = 0; i < NomesProdutos.Length; i++)
+            {
+                if(CategoriaProdutos[i] == "Antiinflamatorio")
+                {
+                    quantidadeAntiinflamatorio++;
+                }
+            }
+
+            return quantidadeAntiinflamatorio;
+        }
+        public void ApresentarQuantidadeAntiinflamatorio()
+        {
+            CalularQuantidadePedidosAntiinflamatorio();
         }
     }
 }
