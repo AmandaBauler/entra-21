@@ -15,7 +15,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             temperatura.TipoTemperaturaDestino = "F";
             temperatura.TemperaturaAtual = 42.30;
 
-           //Console.WriteLine("Temperatura convertida: " + temperatura.ApresentarTemperatura());
+           Console.WriteLine("Temperatura convertida: " + temperatura.ApresentarTemperatura());
         }
     }
 }

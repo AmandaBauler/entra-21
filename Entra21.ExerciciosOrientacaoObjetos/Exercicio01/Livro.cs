@@ -31,5 +31,12 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
         {
             Console.WriteLine($"Você leu no total {QuantidadePaginasLidas} páginas.");
         }
+        public void ApresentarAnosPosPublicacao()
+        {
+            var anosPosPublicacao = DateTime.Now.Year - DataLancamento.Year;
+
+            Console.WriteLine("Após o ano da publicação deste livro, se passaram " + anosPosPublicacao + " anos.");
+        }
+
     }
 }

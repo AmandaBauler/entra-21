@@ -16,10 +16,12 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
             livro.CodigoIsbn = "978-1-63-245042-5";
             livro.QuantidadePaginas = 224;
             livro.QuantidadePaginasLidas = 112;
+            livro.DataLancamento = DateTime.Parse("2010/6/10");
 
             livro.ApresentarTituloAutor();
             livro.ApresentarQuantidadePaginasParaLer();
             livro.ApresentarQuantidadePaginasLidasNoTotal();
+            livro.ApresentarAnosPosPublicacao();
 
         }
     }
