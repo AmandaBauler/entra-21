@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExerciciosListas
+namespace Entra21.ExerciciosListas.Exercicio02.Exercicio02
 {
     public class Exercicio01
     {
@@ -26,13 +26,9 @@ namespace Entra21.ExerciciosListas
             //Verificar se filme esta na lista
             bool contemFilme = melhoresFilmes.Contains("Lanterna verde");
             if (contemFilme == true)
-            {
                 Console.WriteLine("O filme Lanterna Verde esta na lista!");
-            }
             else
-            {
                 Console.WriteLine("O filme Lanterna verde não esta na lista!");
-            }
             //Adicionar filme
             melhoresFilmes.Add("Quarteto fantástico");
             //Apresentar
@@ -44,13 +40,9 @@ namespace Entra21.ExerciciosListas
             //Verificar se filme esta na lista
             bool contemFilme1 = melhoresFilmes.Contains("A Lagoa Azul");
             if (contemFilme1 == true)
-            {
                 Console.WriteLine("O filme lagoa azul esta na lista!");
-            }
             else
-            {
                 Console.WriteLine("O filme lagoa azul não esta na lista!");
-            }
 
         }
 

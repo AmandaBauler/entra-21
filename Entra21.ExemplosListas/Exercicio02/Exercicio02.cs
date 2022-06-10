@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExerciciosListas
+namespace Entra21.ExerciciosListas.Exercicio02
 {
     public class Exercicio02
     {

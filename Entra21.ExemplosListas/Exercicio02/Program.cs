@@ -1,4 +1,4 @@
-﻿using Entra21.ExerciciosListas;
+﻿using Entra21.ExerciciosListas.Exercicio02;
 
 Console.WriteLine(@"----------------Menu--------------
 1- Opção 01

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExerciciosListas
+namespace Entra21.ExerciciosListas.Exercicio02
 {
     public class Exercicio03
     {
@@ -14,7 +14,7 @@ namespace Entra21.ExerciciosListas
             Console.WriteLine("Informe sua primeira nota: ");
             double nota1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Informe sua segunda nota: ");
-            double nota2 = Convert.ToDouble(Console.ReadLine()); 
+            double nota2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Informe sua terceira nota: ");
             double nota3 = Convert.ToDouble(Console.ReadLine());
             notas.Add(nota1);
@@ -26,14 +26,10 @@ namespace Entra21.ExerciciosListas
             double media = soma / 3;
             Console.WriteLine("\nMédia final: " + media.ToString("F"));
 
-            if(media < 6.5)
-            {
+            if (media < 6.5)
                 Console.WriteLine("REPROVADO");
-            }
             else
-            {
                 Console.WriteLine("APROVADO");
-            }
 
 
         }
