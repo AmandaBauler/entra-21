@@ -9,14 +9,22 @@
 
         public bool ValidarTriangulo()
         {
-            var somaLadosTriangulo = (Lado1 + Lado2) < Lado3;
-            //Math.Abs(calculo aqui)
-            //Criar outras variáveis para o triangulo.
-            //&&
+            int subtracaoLado23 = Math.Abs(Lado2 - Lado3);
+            int subtracaoLado13 = Math.Abs(Lado1 - Lado3);
+            int subtracaoLado12 = Math.Abs(Lado1 - Lado2);
+            int somaLado13 = (Lado1 + Lado3);
+            int somaLado23 = (Lado2 + Lado3);
+            int somaLado12 = (Lado1 + Lado2);
 
-            if (somaLadosTriangulo == true)
+            if (subtracaoLado23 < Lado1 && somaLado23 < Lado1)
             {
-                return true;
+                if (subtracaoLado13 < Lado2 && somaLado13 < Lado2)
+                {
+                    if (subtracaoLado12 < Lado3 && somaLado12 < Lado3)
+                    {
+                        return true;
+                    }
+                }
             }
             return false;
         }
