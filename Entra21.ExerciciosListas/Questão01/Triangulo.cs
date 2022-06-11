@@ -16,6 +16,8 @@
             int somaLado23 = (Lado2 + Lado3);
             int somaLado12 = (Lado1 + Lado2);
 
+            //cirar novos metodos, os if não estão corretos: Exemplo 
+            //private bool IsLado1Valido() e fazer o primeiro if la dentro.
             if (subtracaoLado23 < Lado1 && somaLado23 < Lado1)
             {
                 if (subtracaoLado13 < Lado2 && somaLado13 < Lado2)
