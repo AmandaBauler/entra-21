@@ -32,13 +32,16 @@
             {
                 return false;
             }
+            else if (trianguloEditar.ValidarTriangulo() == true)
+            {
+                trianguloEditar.Lado1 = lado1;
+                trianguloEditar.Lado2 = lado2;
+                trianguloEditar.Lado3 = lado3;
 
-            trianguloEditar.Lado1 = lado1;
-            trianguloEditar.Lado2 = lado2;
-            trianguloEditar.Lado3 = lado3;
+                return true;
+            }
 
-            return true;
-
+            return false;
         }
         public bool ApagarTriangulo(int codigo)
         {
