@@ -7,28 +7,58 @@
         public int Lado2;
         public int Lado3;
 
+
+        //cirar novos metodos, os if não estão corretos: Exemplo 
+        //private bool IsLado1Valido() e fazer o primeiro if la dentro.
         public bool ValidarTriangulo()
         {
-            int subtracaoLado23 = Math.Abs(Lado2 - Lado3);
-            int subtracaoLado13 = Math.Abs(Lado1 - Lado3);
-            int subtracaoLado12 = Math.Abs(Lado1 - Lado2);
-            int somaLado13 = (Lado1 + Lado3);
-            int somaLado23 = (Lado2 + Lado3);
-            int somaLado12 = (Lado1 + Lado2);
-
-            //cirar novos metodos, os if não estão corretos: Exemplo 
-            //private bool IsLado1Valido() e fazer o primeiro if la dentro.
-            if (subtracaoLado23 < Lado1 && somaLado23 < Lado1)
+            if (IsLado1Valido() == true && IsLado2Valido() == true && IsLado3Valido() == true)
             {
-                if (subtracaoLado13 < Lado2 && somaLado13 < Lado2)
-                {
-                    if (subtracaoLado12 < Lado3 && somaLado12 < Lado3)
-                    {
-                        return true;
-                    }
-                }
+                return true;
             }
+
             return false;
         }
+        private bool IsLado1Valido()
+        {
+            int subtracaoLado23 = Math.Abs(Lado2 - Lado3);
+            int somaLado23 = (Lado2 + Lado3);
+
+            if (subtracaoLado23 < Lado1 && somaLado23 < Lado1)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        private bool IsLado2Valido()
+        {
+            int subtracaoLado13 = Math.Abs(Lado1 - Lado3);
+            int somaLado13 = (Lado1 + Lado3);
+
+            if (subtracaoLado13 < Lado2 && somaLado13 < Lado2)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        private bool IsLado3Valido()
+        {
+            int subtracaoLado12 = Math.Abs(Lado1 - Lado2);
+            int somaLado12 = (Lado1 + Lado2);
+
+            if (subtracaoLado12 < Lado3 && somaLado12 < Lado3)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        
+
+
+
+
     }
 }

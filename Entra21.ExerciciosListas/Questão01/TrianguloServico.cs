@@ -9,14 +9,14 @@
         {
             Triangulo triangulo = new Triangulo();
 
+            triangulo.Lado1 = Lado1;
+            triangulo.Lado2 = Lado2;
+            triangulo.Lado3 = Lado3;
+            triangulo.Codigo = codigoAtual;
+
             if (triangulo.ValidarTriangulo() == true)
             {
-                triangulo.Lado1 = Lado1;
-                triangulo.Lado2 = Lado2;
-                triangulo.Lado3 = Lado3;
-                triangulo.Codigo = codigoAtual;
-
-                codigoAtual = codigoAtual + 1;
+                codigoAtual += +1;
 
                 triangulos.Add(triangulo);
 
