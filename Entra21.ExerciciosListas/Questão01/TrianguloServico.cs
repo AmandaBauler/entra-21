@@ -22,6 +22,7 @@
 
                 return true;
             }
+
             return false;
         }
         public bool EditarTriangulo(int codigoEditar, int lado1, int lado2, int lado3)
@@ -32,11 +33,14 @@
             {
                 return false;
             }
-            else if (trianguloEditar.ValidarTriangulo() == true)
+
+            trianguloEditar.Lado1 = lado1;
+            trianguloEditar.Lado2 = lado2;
+            trianguloEditar.Lado3 = lado3;
+
+            if (trianguloEditar.ValidarTriangulo() == true)
             {
-                trianguloEditar.Lado1 = lado1;
-                trianguloEditar.Lado2 = lado2;
-                trianguloEditar.Lado3 = lado3;
+                triangulos.Add(trianguloEditar);
 
                 return true;
             }
@@ -45,18 +49,16 @@
         }
         public bool ApagarTriangulo(int codigo)
         {
-            for (int i = 0; i < triangulos.Count; i++)
+            Triangulo trianguloApagar = ObterPorCodigo(codigo);
+
+            if (trianguloApagar == null)
             {
-                Triangulo triangulo = triangulos[i];
-
-                if (triangulo.Codigo == codigo)
-                {
-                    triangulos.Remove(triangulo);
-
-                    return true;
-                }
+                return false;
             }
-            return false;
+
+            triangulos.Remove(trianguloApagar);
+
+            return true;
         }
         public List<Triangulo> ObterTodos()
         {

@@ -17,7 +17,7 @@
                 return true;
             }
 
-            return false;
+            return true;
         }
         private bool IsLado1Valido()
         {
