@@ -39,9 +39,7 @@
             trianguloEditar.Lado3 = lado3;
 
             if (trianguloEditar.ValidarTriangulo() == true)
-            {
-                triangulos.Add(trianguloEditar);
-
+            { 
                 return true;
             }
 

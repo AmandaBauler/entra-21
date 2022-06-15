@@ -17,14 +17,14 @@
                 return true;
             }
 
-            return true;
+            return false;
         }
         private bool IsLado1Valido()
         {
             int subtracaoLado23 = Math.Abs(Lado2 - Lado3);
             int somaLado23 = (Lado2 + Lado3);
 
-            if (subtracaoLado23 < Lado1 && somaLado23 < Lado1)
+            if (subtracaoLado23 < Lado1 && Lado1 < somaLado23)
             {
                 return true;
             }
@@ -36,7 +36,7 @@
             int subtracaoLado13 = Math.Abs(Lado1 - Lado3);
             int somaLado13 = (Lado1 + Lado3);
 
-            if (subtracaoLado13 < Lado2 && somaLado13 < Lado2)
+            if (subtracaoLado13 < Lado2 && Lado2 < somaLado13)
             {
                 return true;
             }
@@ -48,7 +48,7 @@
             int subtracaoLado12 = Math.Abs(Lado1 - Lado2);
             int somaLado12 = (Lado1 + Lado2);
 
-            if (subtracaoLado12 < Lado3 && somaLado12 < Lado3)
+            if (subtracaoLado12 < Lado3 && Lado3 < somaLado12)
             {
                 return true;
             }
