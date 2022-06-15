@@ -12,7 +12,7 @@
         //private bool IsLado1Valido() e fazer o primeiro if la dentro.
         public bool ValidarTriangulo()
         {
-            if (IsLado1Valido() == true && IsLado2Valido() == true && IsLado3Valido() == true)
+            if (IsLado1Valido() && IsLado2Valido() && IsLado3Valido())
             {
                 return true;
             }
