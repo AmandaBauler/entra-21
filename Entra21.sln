@@ -26,7 +26,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientaca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosListas", "Entra21.ExerciciosListas\Entra21.ExerciciosListas.csproj", "{72EA11DA-6403-4141-B183-6F6785B87AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosListas", "Entra21.ExemplosListas\Entra21.ExemplosListas.csproj", "{3E8399E7-234E-4FF2-BE9D-58EA402063E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosListas", "Entra21.ExemplosListas\Entra21.ExemplosListas.csproj", "{3E8399E7-234E-4FF2-BE9D-58EA402063E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosWindowsForms", "Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{3E8399E7-234E-4FF2-BE9D-58EA402063E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E8399E7-234E-4FF2-BE9D-58EA402063E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E8399E7-234E-4FF2-BE9D-58EA402063E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

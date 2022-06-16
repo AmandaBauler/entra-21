@@ -6,10 +6,6 @@
         public int Lado1;
         public int Lado2;
         public int Lado3;
-
-
-        //cirar novos metodos, os if não estão corretos: Exemplo 
-        //private bool IsLado1Valido() e fazer o primeiro if la dentro.
         public bool ValidarTriangulo()
         {
             if (IsLado1Valido() && IsLado2Valido() && IsLado3Valido())
