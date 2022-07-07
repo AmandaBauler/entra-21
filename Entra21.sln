@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CBF00A8-9076-4D71-8483-A374A167AC95}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		ExemplosSQL\ExemplosSQLComandosBasicos.sql = ExemplosSQL\ExemplosSQLComandosBasicos.sql
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{8CADB519-690B-4293-BF38-D679B1922C51}"
@@ -28,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosListas", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosListas", "Entra21.ExemplosListas\Entra21.ExemplosListas.csproj", "{3E8399E7-234E-4FF2-BE9D-58EA402063E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosWindowsForms", "Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWindowsForms", "Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
