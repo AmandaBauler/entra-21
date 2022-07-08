@@ -47,3 +47,30 @@ INSERT INTO champions(id, nome, descricao, habilidade_1, habilidade_2, habilidad
 
 SELECT id, nome, descricao, habilidade_1, habilidade_2, habilidade_3, habilidade_4, habilidade_5
 	FROM champions;
+
+UPDATE champions SET descricao = 'um ioniano extremamente determinado'
+	WHERE id = 2;
+
+UPDATE champions SET descricao = 'o Espadachim Wuju'
+	WHERE id = 3;
+UPDATE champions SET habilidade_2 = 'Ataque Alpha'
+	WHERE id = 3;
+UPDATE champions SET habilidade_3 = 'Meditar'
+	WHERE id = 3;
+UPDATE champions SET habilidade_4 = 'Estilo Wuju'
+	WHERE id = 3;
+UPDATE champions SET habilidade_5 = 'Highlander'
+	WHERE id = 3;
+
+UPDATE champions SET habilidade_5 = 'Chute Poderoso'
+	WHERE id = 5;
+
+UPDATE champions SET habilidade_2 = 'Quebra-Cofres'
+	WHERE id = 6;
+
+UPDATE champions SET descricao = 'defensores honrados de Shurima contra o temido Vazio'
+	WHERE id = 9;
+
+SELECT id, nome, descricao, habilidade_1, habilidade_2, habilidade_3, habilidade_4, habilidade_5
+	FROM champions;
+
