@@ -66,7 +66,6 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio04
         {
             CalcularQuantidadePedidosAntibioticos();
         }
-     
         public double CalcularValoresPorCategoriaAntiinflamatorio()
         {
             var totalPedidosAntiinflamatorio = 0.0;

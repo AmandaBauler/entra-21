@@ -69,7 +69,7 @@ CREATE TABLE enderecos(
 	INSERT INTO enderecos(id_cliente, estado, cidade, bairro, cep, logradouro, numero) VALUES
 	(1, 'SC', 'Blumenau', 'Velha', '89070-301', 'Rua Divinopolis', 777),
 	(2, 'SC', 'Blumenau', 'Velha Grande', '89070-472', 'Morro da Edith', 36),
-	(4, 'SC', 'Blumenau', 'Judith', 'Sem Cep', 'Rua da Kelen', 23);
+	(3, 'SC', 'Blumenau', 'Judith', 'Sem Cep', 'Rua da Kelen', 23);
 
 	-- COSULTA PARA LISTAR O NOME, CPF E ENDEREÇO COMPLETO DO CLIENTE
 	-- CONSULTA PARTE DA TABELA DE CLIENTE FAZENDO INNER JOIN COM TABELA DE ENDEREÇO
@@ -115,3 +115,68 @@ CREATE TABLE enderecos(
 
 	SELECT * FROM pedidos;
 
+-- Adicionar as peças ao pedido
+SELECT * FROM pecas; -- vendo todas as peças disponiveis
+
+INSERT INTO pedidos_pecas (id_pedido, id_peca, quantidade) VALUES
+(1, 2, 2), -- 2 SSDs M2 para o pedido 
+(1, 4, 1), -- 1 GTX 1060 para o pedido 
+(1, 6, 1); -- 1 módulo 16GB RAM DDR5
+
+UPDATE pedidos SET id_cliente = 2 WHERE id = 1;
+
+-- Consultar apresentando nome cliente, nome peça, quantidade, valor unitario, total das peças
+SELECT 
+	pd.id AS 'Código do pedido',
+	c.nome AS 'Cliente',
+	p.nome AS 'Peça',
+	pp.quantidade AS 'Quantidade',
+	CONCAT('R$', p.preco_unitario) AS 'Valor Unitario',
+	CONCAT('R$', p.preco_unitario * pp.quantidade) AS 'Total das peças'
+	FROM pedidos_pecas AS pp
+	INNER JOIN pecas AS p ON(pp.id_peca = p.id)
+	INNER JOIN pedidos AS pd ON(pp.id_pedido = pd.id)
+	INNER JOIN clientes AS c ON(pd.id_cliente = c.id);
+
+	-- Criar pedido para Claudio
+	INSERT INTO pedidos(id_cliente, data_criacao, status) VALUES
+	(1, GETDATE(), 0); -- GETDATE() é o mesmo que DateTime.Now
+
+	SELECT * FROM pecas;
+
+	INSERT INTO pedidos_pecas(id_pedido, id_peca, quantidade) VALUES
+	(3, 2, 2), -- id_pedido = 3, id_peca = 2 (SSD 240M2), quantidade = 2
+    (3, 3, 2), -- id_pedido = 3, id_peca = 3 (RTX3090 TI), quantidade = 2
+	(3, 5, 4); -- id_pedido = 3, id_peca = 5 (16GB RAM DDR5), quantidade = 4 QUAD CHANEL
+
+	-- Apresentar informações do pedido do cliente Claudio
+	SELECT
+		p.id AS 'Códio Pedido',
+		p.status AS 'Status Pedido',
+		c.nome AS 'Cliente',
+		CONCAT(
+			e.estado, ' ',
+			e.cidade, ' ',
+			e.bairro, ' ',
+			e.logradouro, ' ',
+			e.numero) AS 'Endereço Completo'
+		FROM pedidos AS p
+		INNER JOIN clientes AS c ON(p.id_cliente = c.id)
+		INNER JOIN enderecos AS e ON(c.id = e.id_cliente)
+		WHERE p.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.489-73');
+
+	-- Efetivar a compra do pedido do Claudio
+	UPDATE pedidos SET status = 2, data_efetivacao_compra = '2022-07-12 17:30:00'
+		WHERE id = 3;
+
+	-- Consultar peças do pedido do Claudio
+	SELECT 
+	p.id AS 'Código Pedido',
+	p.status AS 'Status Pedido',
+	c.nome AS 'Cliente',
+	pec.nome AS 'Peça'
+	FROM pedidos AS pd
+	INNER JOIN clientes AS c ON(p.id_cliente = c.id)
+	INNER JOIN pedidos_pecas AS pp ON(p.id = pp.id_pedido)
+	INNER JOIN pecas AS pec ON(pp.id_peca = pec.id)
+	WHERE p.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.489-73');

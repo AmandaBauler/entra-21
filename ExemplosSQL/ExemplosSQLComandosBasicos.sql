@@ -7,6 +7,7 @@
 	tipo VARCHAR(15)
 );
 
+
 INSERT INTO trabalhos 
 	(titulo, subtitulo, descricao, data_publicacao, tipo)
 	VALUES ('A melhor pizza do mundo', 'Como degustar uma pizza de calabresa', 
