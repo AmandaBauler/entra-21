@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosListas", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWindowsForms", "Entra21.ExemplosWindowsForms\Entra21.ExemplosWindowsForms.csproj", "{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.BancoDadosAdo.net", "Entra21.BancoDadosAdo.net\Entra21.BancoDadosAdo.net.csproj", "{FC93C65E-2F02-4505-96A3-56E1019F05F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4598B9C-F94F-4E27-9023-8C54CA6F3E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC93C65E-2F02-4505-96A3-56E1019F05F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC93C65E-2F02-4505-96A3-56E1019F05F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC93C65E-2F02-4505-96A3-56E1019F05F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC93C65E-2F02-4505-96A3-56E1019F05F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

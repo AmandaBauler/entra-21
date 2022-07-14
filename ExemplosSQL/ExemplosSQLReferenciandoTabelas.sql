@@ -171,12 +171,12 @@ SELECT
 
 	-- Consultar peças do pedido do Claudio
 	SELECT 
-	p.id AS 'Código Pedido',
-	p.status AS 'Status Pedido',
+	pd.id AS 'Código Pedido',
+	pd.status AS 'Status Pedido',
 	c.nome AS 'Cliente',
 	pec.nome AS 'Peça'
 	FROM pedidos AS pd
-	INNER JOIN clientes AS c ON(p.id_cliente = c.id)
-	INNER JOIN pedidos_pecas AS pp ON(p.id = pp.id_pedido)
+	INNER JOIN clientes AS c ON(pd.id_cliente = c.id)
+	INNER JOIN pedidos_pecas AS pp ON(pd.id = pp.id_pedido)
 	INNER JOIN pecas AS pec ON(pp.id_peca = pec.id)
-	WHERE p.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.489-73');
+	WHERE pd.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.489-73');
