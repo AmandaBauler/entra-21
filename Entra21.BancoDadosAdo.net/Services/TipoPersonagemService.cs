@@ -20,10 +20,10 @@ namespace Entra21.BancoDadosAdo.net.Services
             //Definido o comando para apagar o registro
             comando.CommandText = "DELETE FROM tipos_personagens WHERE id = " + id;
 
-            //Executado o comando para apagar o registro
+            //Executado o UPDATE na tabela de tipos_personagens
             comando.ExecuteNonQuery();
 
-            //Fechar coneão com bd
+            //Fechar conexão
             comando.Connection.Close();
         }
         public void Cadastrar(TipoPersonagem tipoPersonagem)
@@ -45,7 +45,50 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             conexao.Close();
         }
+        public void Editar(TipoPersonagem tipoPersonagem)
+        {
+            var conexao = new Conexao().Conectar();
 
+            //Conectado no banco de dados e definido a query que será executada
+            var comando = conexao.CreateCommand();
+            comando.CommandText = "UPDATE tipos_personagens SET tipo = '" + tipoPersonagem.Tipo + "' WHERE id = " + tipoPersonagem.Id;
+
+            //Executa UPDATE na tabela de tipos_personagens
+            comando.ExecuteNonQuery();
+
+            //Fechar conexao
+            comando.Connection.Close();
+        }
+        public TipoPersonagem ObterPorId(int id)
+        {
+            var conexao = new Conexao().Conectar();
+
+            //Conectado no banco de dados e definido a query que será executada
+            var comando = conexao.CreateCommand();
+            comando.CommandText = "SELECT id, tipo FROM tipos_personagens WHERE id = '" + id + "'";
+
+            //Instanciando tabela em memoria para armazenar os registros na tabela em memoria
+            var tabelaEmMemoria = new DataTable();
+
+            //Executado a consulta na tabela de tipos_personagens armazenando-os na tabela em memoria
+            tabelaEmMemoria.Load(comando.ExecuteReader());
+
+            if(tabelaEmMemoria.Rows.Count == 0)
+                return null;
+
+            var primeiroRegistro = tabelaEmMemoria.Rows[0];
+
+            var tipoPersonagem = new TipoPersonagem();
+            //Obter a primeira coluna do select que é o Id
+            tipoPersonagem.Id = Convert.ToInt32(primeiroRegistro[0]);
+            //Obter a segunda coluna do select que é o tipo
+            tipoPersonagem.Tipo = primeiroRegistro[1].ToString();
+
+            //Fechar conexão
+            comando.Connection.Close();
+
+            return tipoPersonagem;
+        }
         public List<TipoPersonagem> ObterTodos()
         {
             //Criado conexão com BancoDeDados e aberta a conexão

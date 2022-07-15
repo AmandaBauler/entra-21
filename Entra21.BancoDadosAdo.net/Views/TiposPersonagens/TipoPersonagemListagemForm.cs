@@ -26,7 +26,6 @@ namespace Entra21.BancoDadosAdo.net.Views.TiposPersonagens
             tipoPersonagemService = new TipoPersonagemService();
 
         }
-
         private void TipoPersonagemListagemForm_Load(object sender, EventArgs e)
         {
             AtualizarRegistrosDataGridView();
@@ -61,7 +60,6 @@ namespace Entra21.BancoDadosAdo.net.Views.TiposPersonagens
                 });
             }
         }
-
         private void buttonApagar_Click(object sender, EventArgs e)
         {
             var id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
@@ -71,6 +69,37 @@ namespace Entra21.BancoDadosAdo.net.Views.TiposPersonagens
             AtualizarRegistrosDataGridView();
 
             MessageBox.Show("Registro apagado com sucesso");
+        }
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("CADASTRE ALGUM TIPO DE PERSONAGEM");
+                return;
+            }
+
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione algum registro");
+                return;
+            }
+
+            //Obter a linha selecionada
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            //Obter o id da linha selecionada
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);  
+
+            //Obter do banco de dados o tipo de personagem selecionado 
+            var tipoPersonagem = tipoPersonagemService.ObterPorId(id);
+
+            //Instanciado objeto do form para permitir edição passando o tipo
+            //personagem, que permitirá preencher os campos com os dados do banco de dados.
+            var tipoPersonagemForm = new TipoPersonagemCadastroEdicaoForm(tipoPersonagem);
+            //Apresentado o form para o usiario
+            tipoPersonagemForm.ShowDialog();
+
+            AtualizarRegistrosDataGridView();
         }
     }
 }
