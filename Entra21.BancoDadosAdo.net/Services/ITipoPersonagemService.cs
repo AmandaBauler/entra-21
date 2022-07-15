@@ -4,6 +4,8 @@ namespace Entra21.BancoDadosAdo.net.Services
 {
     internal interface ITipoPersonagemService
     {
-        void Cadastrar(TipoPersonagem tipoPersonagem); 
+        void Cadastrar(TipoPersonagem tipoPersonagem);
+        List<TipoPersonagem> ObterTodos();
+        void Apagar(int id);
     }
 }
