@@ -1,3 +1,4 @@
+using Entra21.BancoDadosAdo.net.Views.Personagens;
 using Entra21.BancoDadosAdo.net.Views.TiposPersonagens;
 
 namespace Entra21.BancoDadosAdo.net
@@ -13,7 +14,7 @@ namespace Entra21.BancoDadosAdo.net
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new TipoPersonagemListagemForm());
+            Application.Run(new PersonagemCadastroEdicaoForm());
 
         }
     }

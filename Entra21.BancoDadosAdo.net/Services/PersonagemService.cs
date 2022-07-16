@@ -28,7 +28,7 @@ namespace Entra21.BancoDadosAdo.net.Services
 
         }
 
-        public void Cadastras(Personagem personagem)
+        public void Cadastrar(Personagem personagem)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();

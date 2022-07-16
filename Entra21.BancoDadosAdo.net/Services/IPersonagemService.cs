@@ -6,7 +6,7 @@ namespace Entra21.BancoDadosAdo.net.Services
     {
         List<Personagem> ObterTodos();
         Personagem ObterPorId(int id);
-        void Cadastras(Personagem personagem);
+        void Cadastrar(Personagem personagem);
         void Editar(Personagem personagem);
         void Apagar(int id);
     }
