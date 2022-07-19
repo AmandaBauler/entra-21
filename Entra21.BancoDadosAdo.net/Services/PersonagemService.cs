@@ -22,7 +22,6 @@ namespace Entra21.BancoDadosAdo.net.Services
             comando.Connection.Close();
 
         }
-
         public void Cadastrar(Personagem personagem)
         {
             var conexao = new Conexao().Conectar();
@@ -41,7 +40,6 @@ namespace Entra21.BancoDadosAdo.net.Services
             comando.Connection.Close();
 
         }
-
         public void Editar(Personagem personagem)
         {
             //Conectado no banco de dados e definido a query que será executada
@@ -62,7 +60,6 @@ namespace Entra21.BancoDadosAdo.net.Services
             comando.Connection.Close();
 
         }
-
         public Personagem ObterPorId(int id)
         {
             var conexao = new Conexao().Conectar();
@@ -97,7 +94,6 @@ namespace Entra21.BancoDadosAdo.net.Services
             return personagem;
 
         }
-
         public List<Personagem> ObterTodos()
         {
             var conexao = new Conexao().Conectar();

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Entra21.BancoDadosAdo.net.DataBase;
 using Entra21.BancoDadosAdo.net.Models;
 
@@ -31,11 +26,11 @@ namespace Entra21.BancoDadosAdo.net.Services
                 var linha = tabelaEmMemoria.Rows[i];
 
                 var editora = new Editora();
-                editora.Id = Convert.ToInt32(linha[0]);
-                editora.Nome = linha[1].ToString();
-                editora.Apelido = linha[2].ToString();
-                editora.DataCriacao = Convert.ToDateTime(linha[3]);
-                editora.Faturamento = Convert.ToDecimal(linha[4]);
+                editora.Id = Convert.ToInt32(linha["id"]);
+                editora.Nome = linha["nome"].ToString();
+                editora.Apelido = linha["apelido"].ToString();
+                editora.DataCriacao = Convert.ToDateTime(linha["data_criacao"]);
+                editora.Faturamento = Convert.ToDecimal(linha["faturamento"]);
 
                 editoras.Add(editora);
             }
