@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Entra21.BancoDadosAdo.net.DataBase;
 using Entra21.BancoDadosAdo.net.Models;
 
@@ -15,7 +10,7 @@ namespace Entra21.BancoDadosAdo.net.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "DELECT FROM personagens WHERE id = @ID";
+            comando.CommandText = "DELETE FROM personagens WHERE id = @ID";
 
             //Substituir os @ no comando da query que será executado no banco de dados, prevenindo SQL Injection
             comando.Parameters.AddWithValue("@ID", id);
@@ -72,7 +67,7 @@ namespace Entra21.BancoDadosAdo.net.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "SELECT id, id_tipo_personagem, od_editora, nome FROM personagens WHERE id = @ID";
+            comando.CommandText = "SELECT id, id_tipo_personagem, id_editora, nome FROM personagens WHERE id = @ID";
             //Substituir o @ do comando do SELECT com o id
             comando.Parameters.AddWithValue("@ID", id);
 
@@ -109,8 +104,12 @@ namespace Entra21.BancoDadosAdo.net.Services
             var comando =conexao.CreateCommand();
 
             comando.CommandText = @"SELECT 
-p.id AS 'id', p.nome AS 'nome', tp.id AS 'tipo_personagem_id'
-tp.tipo AS 'tipo_personagem_tipo', e.id AS 'editora_id', e.nome AS 'editora_nome'
+p.id AS 'id', 
+p.nome AS 'nome', 
+tp.id AS 'tipo_personagem_id',
+tp.tipo AS 'tipo_personagem_tipo', 
+e.id AS 'editora_id', 
+e.nome AS 'editora_nome'
 FROM personagens AS p 
 INNER JOIN tipos_personagens AS tp ON(p.id_tipo_personagem = tp.id)
 INNER JOIN editoras AS e ON(p.id_editora = e.id)";
