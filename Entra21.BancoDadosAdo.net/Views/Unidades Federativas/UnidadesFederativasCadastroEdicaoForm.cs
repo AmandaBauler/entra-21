@@ -5,15 +5,16 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
 {
     public partial class UnidadesFederativasCadastroEdicaoForm : Form
     {
-        private int idEdicao = -1;
+        private readonly int _idEditar;
         public UnidadesFederativasCadastroEdicaoForm()
         {
             InitializeComponent();
-        }
 
+            _idEditar = -1;  
+        }
         public UnidadesFederativasCadastroEdicaoForm(UnidadesFederativas unidadeFederativa) : this()
-        {            
-            idEdicao = unidadeFederativa.Id;
+        {
+            _idEditar = unidadeFederativa.Id;
             
             textBoxUF.Text = unidadeFederativa.Nome;
             textBoxSiglaUf.Text = unidadeFederativa.Sigla;
@@ -29,7 +30,7 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
 
             var unidadeFederativaService = new UnidadesFederativasService();
 
-            if (idEdicao == -1)
+            if (_idEditar == -1)
             {
                 
                 unidadeFederativaService.Cadastrar(unidadeFederativa);
@@ -41,7 +42,7 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
                 return;
             }
 
-            unidadeFederativa.Id = idEdicao;
+            unidadeFederativa.Id = _idEditar;
 
             unidadeFederativaService.Editar(unidadeFederativa);
 
