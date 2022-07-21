@@ -35,6 +35,7 @@ CREATE TABLE cidades (
 
 	FOREIGN KEY(id_unidade_federativa) REFERENCES unidades_federativas(id));
 
+	
 
 
 
