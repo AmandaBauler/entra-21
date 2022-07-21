@@ -21,6 +21,17 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
         }
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            if ((textBoxUF.Text.Length < 2) || (textBoxUF.Text.Length > 100))
+            {
+                MessageBox.Show("Quantidade de caracteres inválida");
+                return;
+            }
+            if (textBoxSiglaUf.Text.Length != 2)
+            {
+                MessageBox.Show("Permitido apenas 2 letras");
+                return;
+            }
+
             var uf = textBoxUF.Text.Trim();
             var sigla = textBoxSiglaUf.Text.Trim();
 
@@ -41,13 +52,20 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
 
                 return;
             }
+            else
+            {
+                unidadeFederativa.Id = _idEditar;
 
-            unidadeFederativa.Id = _idEditar;
+                unidadeFederativaService.Editar(unidadeFederativa);
 
-            unidadeFederativaService.Editar(unidadeFederativa);
+                MessageBox.Show("Tipo de personagem cadastrado com sucesso.");
 
-            MessageBox.Show("Tipo de personagem cadastrado com sucesso.");
-
+                Close();
+            }
+            
+        }
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }
