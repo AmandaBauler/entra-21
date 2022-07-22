@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonApagar = new System.Windows.Forms.Button();
-            this.buttonCadastrar = new System.Windows.Forms.Button();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnUF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSigla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonApagar = new System.Windows.Forms.Button();
+            this.buttonCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,30 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(776, 294);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "Código";
+            this.ColumnID.MinimumWidth = 6;
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            this.ColumnID.Width = 125;
+            // 
+            // ColumnUF
+            // 
+            this.ColumnUF.HeaderText = "Unidade Federativa";
+            this.ColumnUF.MinimumWidth = 6;
+            this.ColumnUF.Name = "ColumnUF";
+            this.ColumnUF.ReadOnly = true;
+            this.ColumnUF.Width = 125;
+            // 
+            // ColumnSigla
+            // 
+            this.ColumnSigla.HeaderText = "Sigla UF";
+            this.ColumnSigla.MinimumWidth = 6;
+            this.ColumnSigla.Name = "ColumnSigla";
+            this.ColumnSigla.ReadOnly = true;
+            this.ColumnSigla.Width = 125;
             // 
             // buttonEditar
             // 
@@ -88,30 +112,6 @@
             this.buttonCadastrar.UseVisualStyleBackColor = true;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
-            // ColumnID
-            // 
-            this.ColumnID.HeaderText = "Código";
-            this.ColumnID.MinimumWidth = 6;
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.ReadOnly = true;
-            this.ColumnID.Width = 125;
-            // 
-            // ColumnUF
-            // 
-            this.ColumnUF.HeaderText = "Unidade Federativa";
-            this.ColumnUF.MinimumWidth = 6;
-            this.ColumnUF.Name = "ColumnUF";
-            this.ColumnUF.ReadOnly = true;
-            this.ColumnUF.Width = 125;
-            // 
-            // ColumnSigla
-            // 
-            this.ColumnSigla.HeaderText = "Sigla UF";
-            this.ColumnSigla.MinimumWidth = 6;
-            this.ColumnSigla.Name = "ColumnSigla";
-            this.ColumnSigla.ReadOnly = true;
-            this.ColumnSigla.Width = 125;
-            // 
             // UnidadesFederativasListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -122,7 +122,7 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UnidadesFederativasListagemForm";
-            this.Text = "UnidadesFederativasListagemForm";
+            this.Text = "Unidade Federativa";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

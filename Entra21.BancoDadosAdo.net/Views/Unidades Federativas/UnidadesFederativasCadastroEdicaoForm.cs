@@ -12,7 +12,7 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
 
             _idEditar = -1;  
         }
-        public UnidadesFederativasCadastroEdicaoForm(UnidadesFederativas unidadeFederativa) : this()
+        public UnidadesFederativasCadastroEdicaoForm(UnidadeFederativa unidadeFederativa) : this()
         {
             _idEditar = unidadeFederativa.Id;
             
@@ -35,7 +35,7 @@ namespace Entra21.BancoDadosAdo.net.Views.Unidades_Federativas
             var uf = textBoxUF.Text.Trim();
             var sigla = textBoxSiglaUf.Text.Trim();
 
-            var unidadeFederativa = new UnidadesFederativas();
+            var unidadeFederativa = new UnidadeFederativa();
             unidadeFederativa.Nome = uf;
             unidadeFederativa.Sigla = sigla;
 

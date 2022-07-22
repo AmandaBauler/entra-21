@@ -20,7 +20,8 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             comando.Connection.Close();
         }
-        public void Cadastrar(UnidadesFederativas unidadeFederativa)
+
+        public void Cadastrar(UnidadeFederativa unidadeFederativa)
         {
             var conexao = new Conexao().Conectar();
 
@@ -34,7 +35,8 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             conexao.Close();
         }
-        public void Editar(UnidadesFederativas unidadeFederativa)
+
+        public void Editar(UnidadeFederativa unidadeFederativa)
         {
             var conexao = new Conexao().Conectar();
 
@@ -49,7 +51,8 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             comando.Connection.Close();
         }
-        public UnidadesFederativas ObterPorId(int id)
+
+        public UnidadeFederativa ObterPorId(int id)
         {
             var conexao = new Conexao().Conectar();
 
@@ -66,7 +69,7 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             var registros = tabelaEmMemoria.Rows[0];
 
-            var unidadeFederativa = new UnidadesFederativas();
+            var unidadeFederativa = new UnidadeFederativa();
             unidadeFederativa.Id = Convert.ToInt32(registros["id"]);
             unidadeFederativa.Nome = registros["nome"].ToString();
             unidadeFederativa.Sigla = registros["sigla"].ToString();
@@ -75,7 +78,8 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             return unidadeFederativa;
         }
-        public List<UnidadesFederativas> ObterTodos()
+
+        public List<UnidadeFederativa> ObterTodos()
         {
             var conexao = new Conexao().Conectar();
 
@@ -87,13 +91,13 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             tabelaEmMemoria.Load(comando.ExecuteReader());
 
-            var unidadeFederativa = new List<UnidadesFederativas>();
+            var unidadeFederativa = new List<UnidadeFederativa>();
 
             for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
             {
                 var linha = tabelaEmMemoria.Rows[i];
 
-                var unidadesFederativas = new UnidadesFederativas();
+                var unidadesFederativas = new UnidadeFederativa();
                 unidadesFederativas.Id = Convert.ToInt32(linha["id"].ToString());
                 unidadesFederativas.Nome = linha["nome"].ToString();
                 unidadesFederativas.Sigla = linha["sigla"].ToString();
@@ -106,6 +110,5 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             return unidadeFederativa;
         }
-
     }
 }

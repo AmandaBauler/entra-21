@@ -18,7 +18,7 @@ namespace Entra21.BancoDadosAdo.net.Services
 
             comando.Connection.Close();
         }
-        public void Cadastrar(Cidades cidades)
+        public void Cadastrar(Cidade cidades)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
@@ -35,7 +35,7 @@ data_hora_fundacao, pib) VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABI
 
             comando.Connection.Close();
         }
-        public void Editar(Cidades cidades)
+        public void Editar(Cidade cidades)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
@@ -56,7 +56,7 @@ WHERE id = @ID";
 
             comando.Connection.Close();
         }
-        public Cidades ObterPorId(int id)
+        public Cidade ObterPorId(int id)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
@@ -71,9 +71,9 @@ WHERE id = @ID";
                 return null;
 
             var registro = tabelaEmMemoria.Rows[0];
-            var cidades = new Cidades();
+            var cidades = new Cidade();
             cidades.Id = Convert.ToInt32(registro[0]);
-            cidades.UnidadesFederativas = new UnidadesFederativas();
+            cidades.UnidadesFederativas = new UnidadeFederativa();
             cidades.UnidadesFederativas.Id = Convert.ToInt32(registro["id_unidades_federativas"]);
             cidades.Nome = registro["nome"].ToString();
             cidades.QuantidadeHabitantes = Convert.ToInt32(registro["quantidade_habitantes"]);

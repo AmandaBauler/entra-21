@@ -28,44 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.labelCidades = new System.Windows.Forms.Label();
+            this.textBoxCidades = new System.Windows.Forms.TextBox();
+            this.comboBoxUF = new System.Windows.Forms.ComboBox();
+            this.labelUF = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonSalvar
             // 
-            this.button1.Location = new System.Drawing.Point(422, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Location = new System.Drawing.Point(417, 359);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
+            this.buttonSalvar.TabIndex = 0;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
-            // button2
+            // buttonCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(395, 213);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Location = new System.Drawing.Point(291, 359);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
+            this.buttonCancelar.TabIndex = 1;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // labelCidades
+            // 
+            this.labelCidades.AutoSize = true;
+            this.labelCidades.Location = new System.Drawing.Point(12, 9);
+            this.labelCidades.Name = "labelCidades";
+            this.labelCidades.Size = new System.Drawing.Size(56, 20);
+            this.labelCidades.TabIndex = 2;
+            this.labelCidades.Text = "Cidade";
+            // 
+            // textBoxCidades
+            // 
+            this.textBoxCidades.Location = new System.Drawing.Point(12, 32);
+            this.textBoxCidades.Name = "textBoxCidades";
+            this.textBoxCidades.Size = new System.Drawing.Size(477, 27);
+            this.textBoxCidades.TabIndex = 3;
+            // 
+            // comboBoxUF
+            // 
+            this.comboBoxUF.FormattingEnabled = true;
+            this.comboBoxUF.Location = new System.Drawing.Point(12, 92);
+            this.comboBoxUF.Name = "comboBoxUF";
+            this.comboBoxUF.Size = new System.Drawing.Size(477, 28);
+            this.comboBoxUF.TabIndex = 4;
+            // 
+            // labelUF
+            // 
+            this.labelUF.AutoSize = true;
+            this.labelUF.Location = new System.Drawing.Point(12, 69);
+            this.labelUF.Name = "labelUF";
+            this.labelUF.Size = new System.Drawing.Size(138, 20);
+            this.labelUF.TabIndex = 6;
+            this.labelUF.Text = "Unidade Federativa";
             // 
             // CidadesCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(523, 400);
+            this.Controls.Add(this.labelUF);
+            this.Controls.Add(this.comboBoxUF);
+            this.Controls.Add(this.textBoxCidades);
+            this.Controls.Add(this.labelCidades);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonSalvar);
             this.Name = "CidadesCadastroEdicaoForm";
-            this.Text = "CidadesCadastroEdicao";
+            this.Text = "Cadastro de Cidades";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button buttonSalvar;
+        private Button buttonCancelar;
+        private Label labelCidades;
+        private TextBox textBoxCidades;
+        private ComboBox comboBoxUF;
+        private Label labelUF;
     }
 }
